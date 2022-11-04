@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    height: 600px;
+}
+
+
+.flex{
+    display: flex;
+}
+
+main{
+    margin-top: 60px;
+    width: 70%;
+    height: 100%;
+}
+.fonte{
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+label{
+    width: 100%;
+    height: auto;
+}
+
+form{
+    width: 50%;
+    flex-direction: column;
+    padding: 10px 0 0 5px;
+    border: 2px solid black;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+div#butao{
+    width: 97%;
+    height: 60px;
+    background-color: dodgerblue;
+    margin: 10px 7px 5px 5px;
+}
+
+imput{
+    height: 30px;
+}
+
+#btn{
+    width: 100%;
+    height: 100%;
+    background-color: dodgerblue;
+    cursor: pointer; 
+    color: whitesmoke;
+}
+
+#usu{
+    width: 99%;
+    height: 50px;
+}
+
+
+#sen{
+    width: 99%;
+    height: 50px;
+}
+

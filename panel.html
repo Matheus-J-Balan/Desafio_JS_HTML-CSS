@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="CSS/panel.css">
+    <title>Panel</title>
+</head>
+<body class="flex ">
+  <main class="flex">
+
+        <div id="barra" class="flex">
+            <div id="menuCliente" class="flex click nomes menu"><span class="material-symbols-outlined"> group_add</span>Clientes</div>
+            <div id="menuProduto" class="flex click nomes menu"><span class="material-symbols-outlined"> redeem </span>Produtos</div>
+            <div id="menuPedido" class="flex click nomes menu"><span class="material-symbols-outlined"> shopping_cart </span>Pedidos</div>
+        </div>
+
+        <div class="flex center" id="base">
+            
+            <!-- /* FORM CLIENTE*/ -->
+            <form class="flex coluna espaco desativo" id="Client" action="">  
+                <div class="flex separa">
+                    <h3 class="flex nomes underline">Clientes</h3>
+                    <button type="button" class="butaos fechar">X</button>
+                </div>
+
+                <div class="flex coluna">
+                    <label class="flex nomes " for="codCli">Código</label>
+                        <input class="flex txtArea heigthButao desativaCursor" type="text" name="codCli" id="codCliente">
+                    <label class="flex nomes " for="nomeCli">Nome</label>
+                        <input class="flex txtArea heigthButao desativaCursor" type="text" name="nomeCli" id="nomeCliente">
+                    <label class="flex nomes " for="dataCad">Data Cadastro</label>
+                        <input class="flex txtArea heigthButao desativaCursor" type="text" name="dataCad" id="dataCadastro">
+                </div>
+
+                <div class="flex separaButao">
+                    <div class="flex space paddSetas">
+                      <input type="button" class="butaos setas" id="voltaCli" value="<">
+                      <input type="button" class="butaos setas" id="avancaCli" value=">">
+                    </div>   
+
+                    <div class="flex space paddSalvaNovo">
+                      <input type="button" class="butaos novo" id="novoCli" value="Novo">
+                      <input type="button" class="butaos salvar" id="salvarCli" value="Salvar">
+                    </div>
+               </div>
+            </form>
+
+            <!-- /* FORM PRODUTO*/ -->
+            <form class="flex coluna espaco desativo" id="Product" action="">
+                <div class="flex separa">
+                    <h3 class="flex nomes underline">Produtos</h3>
+                    <button type="button" class="butaos fechar">X</button>
+                </div>
+
+                <div class="flex coluna">
+                    <label class="flex nomes " for="codProd">Código</label>
+                        <input class="flex txtArea heigthButao desativaCursor" type="text" name="codProd" id="codProduto">
+                    <label class="flex nomes " for="desProd">Descrição</label>
+                        <input class="flex txtArea heigthButao desativaCursor" type="text" name="desProd" id="desProduto">
+                    <label class="flex nomes " for="precoProd">Preço</label>
+                        <input class="flex txtArea heigthButao desativaCursor" type="text" name="precoProd" id="precoProduto">
+                    <label class="flex nomes " for="Qnt">Quantidade</label>
+                        <input class="flex txtArea heigthButao desativaCursor" type="text" name="Qnt" id="Quantidade">
+                </div>
+
+                <div class="flex separaButao">
+                    <div class="flex space paddSetas">
+                      <input type="button" class="butaos setas" id="voltaProd" value="<">
+                      <input type="button" class="butaos setas" id="avancaProd" value=">">
+                    </div>   
+
+                    <div class="flex space paddSalvaNovo">
+                      <input type="button" class="butaos novo" id="novoProd" value="Novo">
+                      <input type="button" class="butaos salvar" id="salvarProd" value="Salvar">
+                    </div>
+               </div>
+            </form>
+            
+            <!-- /* FORM PEDIDOS*/ -->
+            <form class="flex coluna espaco desativo" id="Pedidos" action="">                  
+                
+                <div class="flex separa">
+                    <h3 class="flex nomes underline">Pedidos</h3>
+                    <button type="button" class="butaos fechar">X</button>
+                </div>
+
+                <div class="flex coluna ">
+                    <label class="flex nomes " for="codClientePed">Código do Cliente</label>
+                        <input class="flex txtArea heigthButao" type="text" id="codClientePedido">
+                    <label class="flex nomes " for="nomeClientePed">Cliente</label>
+                        <input class="flex txtArea heigthButao desativaCursor cinza" type="text" id="nomeClientePedido" readonly>
+                    </div>
+
+                    <div class="flex coluna" id="locaProd">
+                        <h3 class="flex nomes corTextoPedido">Localizar Produto</h3>
+                        <div class="flex">
+                            <input type="text" id="inputCodProdPedido" class="flex">
+                            <input type="text" id="inputDescProdPedido" class="flex desativaCursor cinza" readonly>
+                            <input type="text" class="tamInputProd desativaCursor cinza" id="valorProdPedido" readonly>
+                            <input type="text" class="tamInputProd" id="QntPedido">     
+                            <input type="button" class="butaoPedido" id="lancaPedido" value="Lançar no Pedido">                       
+                        </div>
+                    </div>
+                    <h3 class="flex nomes corTextoPedido" id="itensPedido">Itens do Pedido</h3>
+                        <div class="cem flex">
+                            <table class="cem" id="tabela">
+                                <tr class="tablePedidos">
+                                    <th>Itens</th>
+                                    <th>Descrição</th>
+                                    <th>Preço</th>
+                                    <th>Qnt</th>
+                                    <th>Sub-Total</th>
+                                </tr>
+                                <tbody id="tableBody">
+
+                                </tbody>
+                                <tr class="tablePedidos">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Total(R$): </td>
+                                    <td id="Total">00.00</td>
+                                </tr>
+                            </table> 
+                        </div>                    
+                </form>
+            </div>
+        </main>
+        <script src="./Desafio_1_JS/panel.js" type="module"></script>
+    </body>
+    </html>
