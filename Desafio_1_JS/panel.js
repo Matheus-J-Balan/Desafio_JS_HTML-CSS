@@ -205,7 +205,7 @@ var fechar = document.querySelectorAll(".fechar");
     
     for(let indiceQnt of produtos){
             if(inputCodProdPedido.value == indiceQnt["codProduto"]){
-                if(qntPedido.value <= produtos[indiceQnt["codProduto"] -1]["qtdEstoqueProd"]){
+                if(qntPedido.value <= produtos[indiceQnt["codProduto"] -1]["qtdEstoqueProd"] && qntPedido.value != "" && qntPedido.value > 0 ){
                     addLista();
                 }else{
                     alert("Quantidade desejada indisponivel")
