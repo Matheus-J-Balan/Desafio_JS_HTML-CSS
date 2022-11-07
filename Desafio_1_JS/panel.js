@@ -127,13 +127,13 @@ var fechar = document.querySelectorAll(".fechar");
     arrayCli.nomeCliente = document.getElementById('nomeCliente').value;
     arrayCli.dataCadCli = document.getElementById('dataCadastro').value;
 
-    if(arrayCli.codCliente > clientes.length){
+    if(arrayCli.codCliente > clientes.length && arrayCli.nomeCliente != ""){
         clientes.push(arrayCli);
         form[0][2].value = nomeCliente.classList.add('desativaCursor');
         alert("Cliente cadastrado com sucesso!!!");
         dadosCliente(0);
     }else{
-        alert("Clique em NOVO para ser possivel salvar um cliente")
+        alert("Clique em NOVO ou digite um nome para ser possivel salvar um cliente")
     }
     
  })
@@ -158,7 +158,7 @@ var fechar = document.querySelectorAll(".fechar");
     arrayProd.qtdEstoqueProd = document.getElementById('Quantidade').value;
 
     
-    if(arrayProd.codProduto > produtos.length){
+      if(arrayProd.codProduto > produtos.length && arrayProd.descProduto != "" && arrayProd.precoProduto != "" && arrayProd.qtdEstoqueProd != ""){
         produtos.push(arrayProd);
         form[1][2].value = desProduto.classList.add('desativaCursor');
         form[1][3].value = precoProduto.classList.add('desativaCursor');
@@ -166,7 +166,7 @@ var fechar = document.querySelectorAll(".fechar");
         alert("Produto cadastrado com sucesso!!!");
         dadosProduto(0)    
     }else{
-        alert("Clique em NOVO para ser possivel salvar um produto")
+        alert("Clique em NOVO ou preencha os espaços para ser possivel salvar um produto")
     }
  })
 
