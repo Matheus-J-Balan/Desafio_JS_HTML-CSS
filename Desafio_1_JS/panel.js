@@ -1,25 +1,25 @@
 import { produtos } from "./Modulos/produtos.js";
 import { clientes } from "./Modulos/clientes.js";
 
-var menu = document.querySelectorAll(".menu");
-var setaAvancaCliente = document.querySelector("#avancaCli");
-var setaVoltaCliente = document.querySelector("#voltaCli");
-var setaAvancaProduto = document.querySelector("#avancaProd");
-var setaVoltaProduto = document.querySelector("#voltaProd");
-var novoCliente = document.querySelector("#novoCli");
-var salvarCliente = document.querySelector ("#salvarCli");
-var novoProduto = document.querySelector ("#novoProd");
-var salvarProduto = document.querySelector ("#salvarProd");
-var codClientePedido = document.querySelector("#codClientePedido");
-var nomeClientePedido = document.querySelector("#nomeClientePedido");
-var lancaPedido = document.querySelector("#lancaPedido");
-var inputCodProdPedido = document.querySelector("#inputCodProdPedido");
-var inputDescProdPedido = document.querySelector("#inputDescProdPedido");
-var valorProdPedido = document.querySelector("#valorProdPedido");
-var qntPedido = document.querySelector("#QntPedido");
-var form = document.forms;
-var valorClientes;
-var valorProduto;
+let menu = document.querySelectorAll(".menu");
+let setaAvancaCliente = document.querySelector("#avancaCli");
+let setaVoltaCliente = document.querySelector("#voltaCli");
+let setaAvancaProduto = document.querySelector("#avancaProd");
+let setaVoltaProduto = document.querySelector("#voltaProd");
+let novoCliente = document.querySelector("#novoCli");
+let salvarCliente = document.querySelector ("#salvarCli");
+let novoProduto = document.querySelector ("#novoProd");
+let salvarProduto = document.querySelector ("#salvarProd");
+let codClientePedido = document.querySelector("#codClientePedido");
+let nomeClientePedido = document.querySelector("#nomeClientePedido");
+let lancaPedido = document.querySelector("#lancaPedido");
+let inputCodProdPedido = document.querySelector("#inputCodProdPedido");
+let inputDescProdPedido = document.querySelector("#inputDescProdPedido");
+let valorProdPedido = document.querySelector("#valorProdPedido");
+let qntPedido = document.querySelector("#QntPedido");
+let form = document.forms;
+let valorClientes;
+let valorProduto;
 
 for(let i = 0; i < menu.length; i++){
     menu[i].addEventListener('click', function(){
@@ -62,7 +62,7 @@ for(let i = 0; i < menu.length; i++){
    valorProduto = codigo
     }
 
-var fechar = document.querySelectorAll(".fechar");
+let fechar = document.querySelectorAll(".fechar");
     for(let kfechar of fechar){
         kfechar.addEventListener('click', function(){
             Product.classList.add('desativo');
