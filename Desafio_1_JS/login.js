@@ -4,8 +4,8 @@ window.onload = function(){
   const btn = document.querySelector('#btn');
   let validacao = false;
   const dadosUser = async function(){
-    var dadosFetch = await fetch(`./usuario.json`);
-    var dadosJSON = await dadosFetch.json();
+    let dadosFetch = await fetch(`./usuario.json`);
+    let dadosJSON = await dadosFetch.json();
     
     btn.addEventListener('click', function () {
       let usuarioInput = usuario.value;
